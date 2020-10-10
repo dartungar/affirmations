@@ -9,11 +9,6 @@ body {
   font-family: "Epilogue", sans-serif;
 }
 
-body .dark-theme {
-  background-color: black;
-  color: antiquewhite;
-}
-
 @media (prefers-color-scheme: dark) {
   body {
     background-color: rgb(24, 24, 24);
@@ -25,12 +20,19 @@ body a {
   text-decoration: none;
 }
 
-body .main {
+.main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 70%;
-  max-height: 70%;
+  min-height: 30%;
+  width: 60%;
+  min-width: 60%;
+}
+
+@media (max-width: 600px) {
+  .main {
+    width: 85%;
+  }
 }
 
 .card {
@@ -39,32 +41,31 @@ body .main {
   justify-content: center;
   align-items: center;
   margin: 1rem;
-  padding: 2rem;
-  min-height: 7rem;
-  width: 100%;
+  padding: 1rem 2rem;
   height: 100%;
   background-color: rgba(182, 224, 250, 0.479);
   border-radius: 10px;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   text-align: center;
 }
 
-.hero-icon {
-  font-size: 4rem;
+@media (min-width: 600px) {
+  .card {
+    width: 100%;
+  }
 }
 
-.card-text {
-  display: inline-block;
-  vertical-align: middle;
+.hero-icon {
+  font-size: 2rem;
 }
 
 /* todo: remove later */
 .renew-btn-container {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .animation-out {
-  animation: 1s out;
+  animation: 0.5s out;
 }
 
 @keyframes out {
@@ -78,7 +79,7 @@ body .main {
 }
 
 .animation-in {
-  animation: 1s in;
+  animation: 0.5s in;
 }
 
 @keyframes in {

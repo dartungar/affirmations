@@ -12,6 +12,12 @@ window.addEventListener("DOMContentLoaded", () => {
     changeCardAndIcon(container, card, icon);
   });
 
+  window.addEventListener("keyup", (e) => {
+    if (e.code === "Space") {
+      changeCardAndIcon(container, card, icon);
+    }
+  });
+
   //register service worker
   if ("serviceWorker" in navigator) {
     console.log("registering service worker...");
